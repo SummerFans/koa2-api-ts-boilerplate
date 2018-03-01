@@ -1,22 +1,31 @@
-import {getArticle,createArticle} from '../../models/article';
+import * as Koa from "koa"
 
-export async function list(ctx){
+import { getArticle, createArticle } from '../../models/article';
 
-    let result = await getArticle(ctx.query.offset);
-    ctx.body=result
-    
+export async function list(ctx: Koa.Context, next: Function): Promise<void> {
+    // ctx.
+    // let result = await getArticle(ctx.query.offset);
+    // ctx.body=result
+    if (true) {
+        console.log('sss')
+    }
+    ctx.body = {hello: 'Hello Wrold'}
+
+}
+
+export async function addArticle(ctx: Koa.Context, next: Function) {
+    ctx.body = ctx.request.body;
 }
 
 //初始化数据库
-export async function create(ctx){
+export async function create(ctx: Koa.Context, next: Function): Promise<void>  {
 
-    let title=ctx.request.body.title||'not title';
-    let content=ctx.request.body.content||'not content';
-    let author=ctx.request.body.author||'not author'
+    // let title=ctx.request.body.title||'not title';
+    // let content=ctx.request.body.content||'not content';
+    // let author=ctx.request.body.author||'not author'
 
-    let result = await createArticle(title,content,author);
-
-    ctx.body={
-        result:'success'
+    // let result = await createArticle(title,content,author);
+    ctx.body = {
+        result: 'success'
     };
 }

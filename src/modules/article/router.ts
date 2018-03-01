@@ -1,8 +1,15 @@
-import * as article from './controller'
+import * as Router from 'koa-router';
 
-export const baseUrl = '/article'
+import * as article from './controller';
+export const baseUrl = '/article';
 
-export default [
+interface IRouter {
+  method: string;
+  route: string,
+  handlers: Array<any>,
+}
+
+const routers:IRouter[] = [
   {
     method:"GET",
     route:'/',
@@ -11,10 +18,19 @@ export default [
     ]
   },
   {
-    method:"GET",
-    route:'/post',
+    method:"POST",
+    route:'/',
     handlers:[
-      article.create
+      article.addArticle
     ]
-  }
+  },
+  // {
+  //   method:"GET",
+  //   route:'/post',
+  //   handlers:[
+  //     article.create
+  //   ]
+  // }
 ]
+
+export default routers

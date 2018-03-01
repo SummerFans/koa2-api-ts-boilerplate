@@ -28,15 +28,15 @@
         "sequelize": "^3.24.3"
     },
     "devDependencies": {
-        "typescript": "^2.0.3",
         "@types/glob": "^5.0.29",
         "@types/koa": "^2.0.32",
         "@types/koa-bodyparser": "^3.0.18",
         "@types/koa-compose": "^3.0.29",
         "@types/koa-router": "^7.0.20",
-        "@types/node": "^6.0.38",
+        "@types/node": "^6.0.96",
         "@types/sequelize": "^4.0.36",
         "@types/uuid": "^3.3.27",
-        "apidoc": "^0.16.1"
+        "apidoc": "^0.16.1",
+        "typescript": "^2.0.3"
     }
 }
