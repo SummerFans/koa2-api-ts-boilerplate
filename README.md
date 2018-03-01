@@ -3,6 +3,7 @@
 project based on KOA2 framework to develop API services
 
 ## include
+- [x] Koa2
 - [x] Typescript
 - [x] Postgresql
 - [ ] Redis
