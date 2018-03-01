@@ -7,7 +7,7 @@
         "rootDir": "src",
         "preserveConstEnums": true,
         "removeComments": true,
-        "outDir": "build",
+        "outDir": "build"
     },
     "exclude": [
         "node_modules"

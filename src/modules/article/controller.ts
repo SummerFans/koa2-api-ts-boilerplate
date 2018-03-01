@@ -6,10 +6,15 @@ export async function list(ctx: Koa.Context, next: Function): Promise<void> {
     // ctx.
     // let result = await getArticle(ctx.query.offset);
     // ctx.body=result
-    if (true) {
-        console.log('sss')
+    ctx.body = {
+      results: [
+        {
+          title: 'Hello Wrold',
+          content: 'Content'
+        }
+      ],
+      count: 1
     }
-    ctx.body = {hello: 'Hello Wrold'}
 
 }
 
